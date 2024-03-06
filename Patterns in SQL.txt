@@ -1,0 +1,27 @@
+find employees’ employeeNumber, lastName, firstName whose last names end with the literal 
+string ‘on’
+
+SELECT employeeNumber, lastName, firstName
+FROM employees
+WHERE lastName LIKE '%on';
+
+
+ find all employees employeeNumber, lastName, firstName whose last names contain the 
+substring on:
+
+SELECT 
+ employeeNumber, 
+ lastName, 
+ firstName
+FROM
+ employees
+WHERE
+ lastname LIKE '%on%';
+
+To find employees whose first names start with the letter T_m (eg. Tim. Tom etc), end with the 
+letter m, and contain any single character between. 
+
+SELECT employeeNumber, lastName, firstName
+FROM employees
+WHERE firstname LIKE 'T_m';
+

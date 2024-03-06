@@ -1,0 +1,33 @@
+Example:
+SELECT 
+ productCode, 
+ productName, 
+ textDescription
+FROM
+ products t1
+INNER JOIN productlines t2 
+ ON t1.productline = t2.productline;
+
+Example:
+SELECT 
+ customers.customerNumber, 
+ customerName, 
+ orderNumber
+FROM
+ customers
+LEFT JOIN orders ON orders.customerNumber = customers.customerNumber;
+
+Example:
+SELECT 
+ employeeNumber, 
+ customerNumber
+FROM
+ customers
+RIGHT JOIN employees 
+ ON salesRepEmployeeNumber = employeeNumber;
+
+Example:
+SELECT * 
+FROM t1
+CROSS JOIN t2;
+
